@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ininama Magz | 2017</title>
+
+        <meta name="description" content="Ininama Digital Magazine">
+        <meta name="author" content="Team Ethics">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS Include -->
+        <style>
+            /* Replacing Style for Wowbook */
+            .js #book {
+                margin-left: -12000px;
+                width: 100%;
+            }
+        </style>
+
+        <script>
+            var $primary = localStorage.getItem("themePrimary") || '#121212';
+            var $secondary = localStorage.getItem("themeSecondary") || '#ffffff';
+            var $backType = localStorage.getItem('backgroundType') || 'bg-color';
+            var $backValue = '#ffffff';
+
+            if ($backType === 'bg-color') {
+                $backValue = localStorage.getItem('backgroundValue');
+            } else if ($backType === 'bg-image') {
+                var img = localStorage.getItem('backgroundValue');
+                $backValue = 'url(../images/' + img + '.jpg)';
+            }
+
+            document.write('<style>' +
+                ':root {\n' +
+                '--main-primary-color: ' + $primary + ';\n' +
+                '--main-secondary-color: ' + $secondary + ';\n' +
+                '--main-background: ' + $backValue + ';\n' +
+                '}' +
+                '</style>');
+        </script>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/wowbook/wow_book.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css"/>
+
+        <!-- Protip CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/protip.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css"/>
+
+        <!-- Remodal CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/css/remodal.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/remodal-default-theme.css"/>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/introjs.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css"/>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+
+        <script type="text/javascript" src="assets/js/w3.min.js"></script>
+        <script type="text/javascript" src="assets/js/particles.js"></script>
+
+        <script>
+
+        </script>
+
+    </head>
+    <body onload="startTime()" style="overflow: hidden!important">
+        <!-- Particle Element -->
+        <div id="particles-js"></div>
+
+        <div id="magazine" class="remodal-bg">
+            <!-- top navigasi -->
+            <div id="top-nav">
+                <div class="left menu">
+                    <span class="logo"></span>
+                </div>
+                <div class="center menu">
+                    <span class="clock" data-step="7"
+                          data-intro="Always Know The Current Time!"></span>
+                    <span class="weather" data-step="8"
+                          data-intro="I Keep an Eye on Your Position!!"></span>
+                </div>
+                <div class="right menu">
+                    <ul>
+                        <!-- <li class="fullscreen li-icon protip" data-pt-title="Fullscreen"
+                            data-pt-position="bottom">
+                            <i class="fas fa-arrows-alt" data-step="6"
+                               data-intro="For Close Your Browser!"></i>
+                        </li> -->
+                        <li class="toggle-play li-icon protip" data-pt-title="Play Music"
+                            data-pt-position="bottom">
+                            <i class="fas fa-play play" data-step="5"
+                               data-intro="Play Music! if You Already BORED :)"></i>
+                            <i class="fas fa-pause pause"></i>
+                        </li>
+                        <li class="toggle-search li-icon protip" data-pt-title="Search"
+                            data-pt-position="bottom">
+                            <i class="fas fa-search" data-step="4"
+                               data-intro="Find What You Know, in Here!"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end top navigasi -->
+
+            <div id="container">
+                <div id="main">
+                    <div id="book-slide">
+                        <!-- Slider main container -->
+                        <div class="swiper-container" data-step="1"
+                             data-intro="Welcome to Ininama Magz. The Best Digital Magazine 2017.">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/1.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/2-3.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/4-5.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/6-7.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/8-9.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/10-11.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/12-13.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/14-15.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/16-17.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/18-19.png">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-zoom-container">
+                                        <img src="assets/page/slide/20.png">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- bottom nav, navigasi bawah -->
+            <div id="bottom-nav"
+                 data-step="2" data-intro="Use The Navigation to Get Something Special!">
+                <center>
+                    <ul>
+                        <li class="li-icon-res protip" data-pt-title="Flip Mode"
+                            data-pt-position="top">
+                            <a href="flip.html">
+                                <i class="fa fa-book"></i>
+                            </a>
+                        </li>
+                        <li class="slideshow li-icon protip" data-pt-title="Auto Play"
+                            data-pt-position="top">
+                            <i class="fas fa-play-circle play"></i>
+                            <i class="fas fa-pause-circle stop"></i>
+                        </li>
+                        <li class="copied li-icon protip" data-pt-title="Instant Copy"
+                            data-pt-position="top">
+                            <i class="far fa-copy"></i>
+                        </li>
+                        <li class="fcov-slide li-icon protip" data-pt-title="Front Cover"
+                            data-pt-position="top">
+                            <i class="fa fa-backward"></i>
+                        </li>
+                        <li class="prev-slide li-icon protip" data-pt-title="Previous"
+                            data-pt-position="top">
+                            <i class="fa fa-chevron-left"></i>
+                        </li>
+                    </ul>
+                    <div class="logo-icon" data-step="3"
+                         data-intro="Click Me for Fun!">
+                        <div class="submenu">
+                            <span class="arrow"></span>
+                            <ul>
+                                <li>
+                                    <a data-remodal-target="game-modal">
+                                        <i class="fas fa-gamepad"></i>
+                                        <span>More Fun</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-remodal-target="download-modal">
+                                        <i class="fas fa-download"></i>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-remodal-target="comment-modal-slide">
+                                        <i class="fas fa-comment-alt"></i>
+                                        <span>Comment</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-remodal-target="setting-modal-slide">
+                                        <i class="fas fa-sliders-h"></i>
+                                        <span>Setting</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="help">
+                                        <i class="fas fa-question-circle"></i>
+                                        <span>Help</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="next-slide li-icon protip" data-pt-title="Next"
+                            data-pt-position="top">
+                            <i class="fa fa-chevron-right"></i>
+                        </li>
+                        <li class="bcov-slide li-icon protip" data-pt-title="Back Cover"
+                            data-pt-position="top">
+                            <i class="fa fa-forward"></i>
+                        </li>
+                        <li class="zoomout-slide li-icon protip" data-pt-title="Zoom Out"
+                            data-pt-position="top">
+                            <i class="fa fa-search-minus"></i>
+                        </li>
+                        <li class="zoomin-slide li-icon protip" data-pt-title="Zoom In"
+                            data-pt-position="top">
+                            <i class="fa fa-search-plus"></i>
+                        </li>
+                        <li class="toggle-thumbnail li-icon protip" data-pt-title="Show Thumbnails"
+                            data-pt-position="top">
+                            <i class="fas fa-images"></i>
+                        </li>
+                    </ul>
+                </center>
+            </div>
+            <!-- end navigasi bottom -->
+        </div>
+
+        <div w3-include-html="content/side-search.html" id="side-search"></div>
+
+        <div w3-include-html="content/side-thumbnail.html" id="side-thumbnail"></div>
+
+        <div class="remodal" data-remodal-id="comment-modal-slide">
+            <button data-remodal-action="close" class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="content">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf09T8wZVwtk7hoV656JMLC_lkCEzVZ9uoMR8fehtKS-599fA/viewform?embedded=true"
+                        width="100%" height="400" frameborder="0" marginhfive="0" marginwidth="0">Loading...
+                </iframe>
+            </div>
+        </div>
+
+        <div class="remodal setting" data-remodal-id="setting-modal-slide">
+            <button data-remodal-action="close" class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="content">
+                <div class="background-setting">
+                    <h3>Change Background</h3>
+                    <div class="background-list">
+                        <ul>
+                            <li class="bg-setting bg-color">
+                                <a>
+                                    <input type="color" class="input-color input-color-bg" value="#ffffff">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="theme-setting">
+                    <h3>Change Theme</h3>
+                    <div class="theme-list">
+                        <ul>
+                            <li>
+                                <a class="theme-setting theme-color">
+                                    <input type="color" class="input-color input-color-primary" value="#ffffff">
+                                </a>
+                                <label>Primary</label>
+                            </li>
+                            <li>
+                                <a class="theme-setting theme-color">
+                                    <input type="color" class="input-color input-color-secondary" value="#121212">
+                                </a>
+                                <label>Secondary</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button data-remodal-action="confirm" class="remodal-confirm">Save</button>
+            </div>
+        </div>
+
+        <div class="remodal setting download" data-remodal-id="download-modal">
+            <button data-remodal-action="close" class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="content">
+                <div class="background-setting">
+                    <i class="fas fa-desktop"></i>
+                    <div class="dekstop-download">
+                        <a href="https://drive.google.com/file/d/1y--649r7gM6xVpEJl2MqmNIfECTHTMP0/view" target="_blank">
+                            <img src="./assets/images/windows.svg" alt="Windows" title="Windows">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1sIY1g5kvuCA9tMCU-jmjYmwaQ3HNE30t/view" target="_blank">
+                            <img src="./assets/images/apple.png" alt="Macos" title="Apple">
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Jrjvf-xqgvxGhBvFeSEnZLEHRTRRvpCF/view" target="_blank">
+                            <img src="./assets/images/linux.png" alt="Linux" title="Linux">
+                        </a>
+                    </div>
+                </div>
+                <div class="theme-setting">
+                    <i class="fas fa-mobile"></i>
+                    <div class="mobile-download">
+                        <a href="https://drive.google.com/file/d/16ZVmvw1gyn0bxFg7vwaNT65WovoYvJVs/view" target="_blank">
+                            <img src="./assets/images/android.svg" alt="Android" title="Android">
+                        </a>
+                    </div>
+                </div>
+                <div class="theme-setting">
+                    <i class="fas fa-file-pdf"></i>
+                    <div class="mobile-download pdf-download">
+                        <a href="https://drive.google.com/file/d/1Wl526CjS1yXi3hTiCnpLAh3Sv4Kq9hPQ/view" target="_blank">
+                            <img src="./assets/images/pdf.png" alt="PDF" title="PDF">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="remodal game" data-remodal-id="game-modal">
+            <button data-remodal-action="close" class="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="content">
+                <div id="screen"></div>
+            </div>
+        </div>
+
+
+        <audio id="audio-player" loop>
+            <source src="assets/file/backsound.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <audio id="dub-player"></audio>
+
+        <!-- JS Include -->
+        <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="assets/js/protip.min.js"></script>
+        <script type="text/javascript" src="assets/js/simpleWeather.min.js"></script>
+        <script type="text/javascript" src="assets/js/remodal.min.js"></script>
+        <script type="text/javascript" src="assets/js/wow_book.min.js"></script>
+        <script type="text/javascript" src="assets/js/intro.min.js"></script>
+        <script type="text/javascript" src="assets/js/simpler-sidebar.min.js"></script>
+        <script type="text/javascript" src="assets/js/fuse.min.js"></script>
+        <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+        <script type="text/javascript" src="assets/js/melonJS-min.js"></script>
+        <script type="text/javascript" src="assets/js/game.js"></script>
+        <script type="text/javascript" src="assets/js/clumsy-min.js"></script>
+
+        <!-- Particle JS -->
+        <script type="text/javascript">
+            w3.includeHTML();
+            particlesJS.load('particles-js', 'assets/js/particles.json');
+        </script>
+
+        <script type="text/javascript" src="assets/js/articles.js"></script>
+        <script type="text/javascript" src="assets/js/slides.js"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: hidden;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ininama Magz | 2017</title>
+
+    <meta name="description" content="Ininama Digital Magazine">
+    <meta name="author" content="Team Ethics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS Include -->
+    <style>
+        /* Replacing Style for Wowbook */
+
+        .js #book {
+            margin-left: -12000px;
+            width: 100%;
+        }
+    </style>
+
+    <script>
+        var $primary = localStorage.getItem("themePrimary") || '#121212';
+        var $secondary = localStorage.getItem("themeSecondary") || '#ffffff';
+        var $backType = localStorage.getItem('backgroundType') || 'bg-color';
+        var $backValue = '#ffffff';
+
+        if ($backType === 'bg-color') {
+            $backValue = localStorage.getItem('backgroundValue');
+        } else if ($backType === 'bg-image') {
+            var img = localStorage.getItem('backgroundValue');
+            $backValue = 'url(../images/' + img + '.jpg)';
+        }
+
+        document.write('<style>' +
+            ':root {\n' +
+            '--main-primary-color: ' + $primary + ';\n' +
+            '--main-secondary-color: ' + $secondary + ';\n' +
+            '--main-background: ' + $backValue + ';\n' +
+            '}' +
+            '</style>');
+    </script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="assets/css/wowbook/wow_book.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css" />
+
+    <!-- Protip CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/protip.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css" />
+
+    <!-- Remodal CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/remodal.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/remodal-default-theme.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/introjs.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/swiper.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+
+    <script type="text/javascript" src="assets/js/w3.min.js"></script>
+    <script type="text/javascript" src="assets/js/particles.js"></script>
+
+    <script>
+    </script>
+
+</head>
+
+<body onload="startTime()" style="overflow: hidden">
+    <!-- Particle Element -->
+    <div id="particles-js"></div>
+
+    <div w3-include-html="content/flip-modal.html" id="modal"></div>
+
+    <div id="magazine" class="remodal-bg">
+        <!-- top navigasi -->
+        <div id="top-nav">
+            <div class="left menu">
+                <span class="logo"></span>
+            </div>
+            <div class="center menu">
+                <span class="clock" data-step="7" data-intro="Always Know The Current Time!"></span>
+                <span class="weather" data-step="8" data-intro="I Keep an Eye on Your Position!!"></span>
+            </div>
+            <div class="right menu">
+                <ul>
+                    <li class="fullscreen li-icon protip" data-pt-title="Fullscreen" data-pt-position="bottom">
+                        <i class="fas fa-arrows-alt" data-step="6" data-intro="For Close Your Browser!"></i>
+                    </li>
+                    <li class="toggle-play li-icon protip" data-pt-title="Play Music" data-pt-position="bottom">
+                        <i class="fas fa-play play" data-step="5" data-intro="Play Music! if You Already BORED :)"></i>
+                        <i class="fas fa-pause pause"></i>
+                    </li>
+                    <li class="toggle-search li-icon protip" data-pt-title="Search" data-pt-position="bottom">
+                        <i class="fas fa-search" data-step="4" data-intro="Find What You Know, in Here!"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end top navigasi -->
+
+        <div id="container">
+            <div id="main">
+                <div id="book-flip"></div>
+            </div>
+        </div>
+        <!-- bottom nav, navigasi bawah -->
+        <div id="bottom-nav" data-step="2" data-intro="Use The Navigation to Get Something Special!">
+            <center>
+                <ul>
+                    <li class="li-icon-res protip" data-pt-title="Slide Mode" data-pt-position="top">
+                        <a href="slide.html">
+                            <i class="fa fa-columns"></i>
+                        </a>
+                    </li>
+                    <li class="slideshow li-icon protip" data-pt-title="Auto Play" data-pt-position="top">
+                        <i class="fas fa-play-circle play"></i>
+                        <i class="fas fa-pause-circle stop"></i>
+                    </li>
+                    <li class="copied li-icon protip" data-pt-title="Instant Copy" data-pt-position="top">
+                        <i class="far fa-copy"></i>
+                    </li>
+                    <li class="fcov li-icon protip" data-pt-title="Front Cover" data-pt-position="top">
+                        <i class="fa fa-backward"></i>
+                    </li>
+                    <li class="prev li-icon protip" data-pt-title="Previous" data-pt-position="top">
+                        <i class="fa fa-chevron-left"></i>
+                    </li>
+                </ul>
+                <div class="logo-icon" data-step="3" data-intro="Click Me for Fun!">
+                    <div class="submenu">
+                        <span class="arrow"></span>
+                        <ul>
+                            <li>
+                                <a data-remodal-target="game-modal">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>More Fun</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-remodal-target="download-modal">
+                                    <i class="fas fa-download"></i>
+                                    <span>Download</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-remodal-target="comment-modal">
+                                    <i class="fas fa-comment-alt"></i>
+                                    <span>Comment</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a data-remodal-target="setting-modal">
+                                    <i class="fas fa-sliders-h"></i>
+                                    <span>Setting</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="help">
+                                    <i class="fas fa-question-circle"></i>
+                                    <span>Help</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul>
+                    <li class="next li-icon protip" data-pt-title="Next" data-pt-position="top">
+                        <i class="fa fa-chevron-right"></i>
+                    </li>
+                    <li class="bcov li-icon protip" data-pt-title="Back Cover" data-pt-position="top">
+                        <i class="fa fa-forward"></i>
+                    </li>
+                    <li class="zoomout li-icon protip" data-pt-title="Zoom Out" data-pt-position="top">
+                        <i class="fa fa-search-minus"></i>
+                    </li>
+                    <li class="zoomin li-icon protip" data-pt-title="Zoom In" data-pt-position="top">
+                        <i class="fa fa-search-plus"></i>
+                    </li>
+                    <li class="toggle-thumbnail li-icon protip" data-pt-title="Show Thumbnails" data-pt-position="top">
+                        <i class="fas fa-images"></i>
+                    </li>
+                </ul>
+            </center>
+
+        </div>
+        <!-- end navigasi bottom -->
+    </div>
+
+    <div w3-include-html="content/side-search.html" id="side-search"></div>
+
+    <div w3-include-html="content/side-thumbnail.html" id="side-thumbnail"></div>
+
+    <audio id="audio-player" loop>
+        <source src="assets/file/backsound.mp3" type="audio/mp3"> Your browser does not support the audio element.
+    </audio>
+
+    <audio id="dub-player" loop></audio>
+
+    <!-- JS Include -->
+    <script type="text/javascript" src="assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/protip.min.js"></script>
+    <script type="text/javascript" src="assets/js/simpleWeather.min.js"></script>
+    <script type="text/javascript" src="assets/js/remodal.min.js"></script>
+    <script type="text/javascript" src="assets/js/wow_book.min.js"></script>
+    <script type="text/javascript" src="assets/js/intro.min.js"></script>
+    <script type="text/javascript" src="assets/js/simpler-sidebar.min.js"></script>
+    <script type="text/javascript" src="assets/js/fuse.min.js"></script>
+    <script type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script type="text/javascript" src="assets/js/melonJS-min.js"></script>
+    <script type="text/javascript" src="assets/js/game.js"></script>
+    <script type="text/javascript" src="assets/js/clumsy-min.js"></script>
+
+    <!-- Particle JS -->
+    <script type="text/javascript">
+        w3.includeHTML();
+        particlesJS.load('particles-js', 'assets/js/particles.json');
+    </script>
+
+    <script type="text/javascript" src="assets/js/articles.js"></script>
+    <script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+
+</html>
